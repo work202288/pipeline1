@@ -11,6 +11,13 @@ import com.ch.ch6_4.service.ArticleAndAuthorService;
 public class TestSortAndPage {
 	@Autowired 
 	private ArticleAndAuthorService articleAndAuthorService;
+	
+	@RequestMapping("/save")
+	@ResponseBody
+	public String save() {
+		articleAndAuthorService.saveAll();
+		return "保存用户成功！";
+	}
 	@RequestMapping("/findByAnameContaining")
 	@ResponseBody
 	public List<Author> findByAnameContaining(String aname, String sortColum){

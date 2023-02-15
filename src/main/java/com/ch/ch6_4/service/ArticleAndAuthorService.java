@@ -11,4 +11,6 @@ public interface ArticleAndAuthorService {
 	 * 分页查询作者，page代表第几页
 	 */
 	public String findAllAuthorByPage(Integer page, Model model);
+	
+	public void saveAll();
 }

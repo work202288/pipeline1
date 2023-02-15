@@ -1,4 +1,5 @@
 package com.ch.ch6_4.service;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,4 +39,33 @@ public class ArticleAndAuthorServiceImpl implements ArticleAndAuthorService{
 		return "index";
 	}
 	
+	@Override
+	public void saveAll() {
+		Author mu1 = new Author();
+		mu1.setAname("作者17");
+		Author mu2 = new Author();
+		mu2.setAname("作者18");
+		Author mu3 = new Author();
+		mu3.setAname("作者19");
+		Author mu4 = new Author();
+		mu4.setAname("作者20");
+		Author mu5 = new Author();
+		mu5.setAname("作者21");
+		Author mu6 = new Author();
+		mu6.setAname("作者22");
+		Author mu7 = new Author();
+		mu7.setAname("作者23");
+		
+		List<Author> users = new ArrayList<Author>();
+		users.add(mu1);
+		users.add(mu2);
+		users.add(mu3);
+		users.add(mu4);
+		users.add(mu5);
+		users.add(mu6);
+		users.add(mu7);
+		
+		//调用父接口中的方法saveAll
+		authorRepository.saveAll(users);
+	}
 }
