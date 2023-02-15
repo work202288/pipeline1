@@ -12,6 +12,12 @@ public class TestSortAndPage {
 	@Autowired 
 	private ArticleAndAuthorService articleAndAuthorService;
 	
+	@RequestMapping("/getInformation")
+	@ResponseBody
+	public String get() {
+        return "pipeline Test Good, pipeline Test OK lee 666881";
+    }
+	
 	@RequestMapping("/save")
 	@ResponseBody
 	public String save() {
