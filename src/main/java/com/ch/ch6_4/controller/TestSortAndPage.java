@@ -15,7 +15,7 @@ public class TestSortAndPage {
 	@RequestMapping("/getInformation")
 	@ResponseBody
 	public String get() {
-        return "pipeline Test Good, pipeline Test OK lee 66688166uuu";
+        return "pipeline Test Good, pipeline Test OK lee 66688166uuu000";
     }
 	
 	@RequestMapping("/save")
